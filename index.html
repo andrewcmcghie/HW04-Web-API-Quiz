@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Web API Quiz</title>
+</head>
+
+
+<body>
+    <!--This nav bar is to show the link named High Scores. By clicking on the link you should be directed to the highschores.html-->
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="highscores.html">High Scores</a>
+        </li>
+    </ul>
+        
+
+            <h2>Coding Quiz Challenge</h2>
+            <!--This container is supposed to show the instructions for this quiz as well as holding the START button. WHen you click on the START button it should start the quiz/timer-->
+            <div class="container">
+                <div id="start">
+                    <p>Try to answer the following code-related questions within the time limit.</p>
+                    <p>Keep in mind the incorrect answers will penalize your score time by ten seconds!</p>
+                    <button id="startBtn">START</button>
+                </div>
+            </div>
+
+            <div id="theQuiz">
+
+                <div id="timeleft">Time left:</div>
+                <div id="questions"><p>Questions</p></div>
+                   <div>
+                    <button id="a" onclick="checkAnswer ('A')">A</button>
+                   </div>
+                    <div>
+                        <button id="b" onclick="checkAnswer ('B')">B</button>
+                    </div>
+                    <div>
+                        <button id="c" onclick="checkAnswer ('C')">C</button>
+                    </div>
+                    <div>
+                        <button id="d" onclick="checkAnswer ('D')">D</button>
+                    </div>
+                   
+                    <div id="quizResults"></div>
+                </div>
+
+                <div id="endGame">
+                    <div id="highScore"></div>
+                    <input type="text" placeholder="Enter your initials to save your high score!" name="nameScore"
+                        id="nameScore" />
+                    <button id="submitScore">Submit Scores</button>
+                </div>
+
+                <div id="endGameBtns">
+                    <button id="clearHighScores" onclick="clearScore()">Clear Highscores</button>
+                    <button id= "playAgain" onclick="restartQuiz()">Play Again</button>
+                </div>
+
+
+
+
+                <script src="./script.js"></script>
+
+
+</body>
+
+</html>
